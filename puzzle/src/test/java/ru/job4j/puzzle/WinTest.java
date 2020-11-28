@@ -9,6 +9,18 @@ import static org.junit.Assert.*;
 @Ignore
 public class WinTest {
     @Test
+
+    public void whenVerticalNotWin () {
+        int[][] board = {
+                {0, 1, 0, 0, 0},
+                {0, 1, 0, 0, 0},
+                {0, 1, 0, 0, 0},
+                {0, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+        };
+        assertThat(Win.check(board), is(false));
+    }
+    @Test
     public void whenVerticalWin() {
         int[][] board = {
                 {0, 0, 1, 0, 0},
@@ -24,8 +36,8 @@ public class WinTest {
     public void whenHorizontalWin() {
         int[][] board = {
                 {0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0},
                 {1, 1, 1, 1, 1},
+                {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
         };
@@ -55,4 +67,5 @@ public class WinTest {
         };
         assertThat(Win.check(board), is(false));
     }
+
 }
