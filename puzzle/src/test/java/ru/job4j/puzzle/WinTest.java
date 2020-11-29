@@ -12,10 +12,10 @@ public class WinTest {
 
     public void whenVerticalNotWin () {
         int[][] board = {
-                {0, 1, 0, 0, 0},
-                {0, 1, 0, 0, 0},
-                {0, 1, 0, 0, 0},
-                {0, 1, 0, 0, 0},
+                {1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
         };
         assertThat(Win.check(board), is(false));
