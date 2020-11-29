@@ -28,6 +28,7 @@ public class Win {
             if (board[i][i] == 1) {
                 if (Win.checkVertical(board, i) || Win.checkHorizontal(board, i)) {
                     rsl = true;
+                    break;
                 }
             }
 
