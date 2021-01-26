@@ -24,7 +24,7 @@ public class BishopBlackTest {
     @Test
     public void way() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Cell[] way = {Cell.C1};
+        Cell[] way = bishopBlack.way(Cell.G5);
         Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertThat(way, is(expected));
     }
