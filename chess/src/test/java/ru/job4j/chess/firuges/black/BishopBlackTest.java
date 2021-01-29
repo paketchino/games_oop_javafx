@@ -29,4 +29,15 @@ public class BishopBlackTest {
         assertThat(way, is(expected));
     }
 
+    @Test
+    public void isDiagonal() {
+        boolean rsl = false;
+        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
+        try {
+            bishopBlack.way(Cell.B7);
+        } catch (IllegalStateException e) {
+            rsl = true;
+        }
+        assertThat(rsl, is(true));
+    }
 }
